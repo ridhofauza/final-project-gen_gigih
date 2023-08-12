@@ -137,10 +137,9 @@
     * **Code:** 400
     * **Content:** `{ message: <error_message> }`
 
-  **PATCH /api/gigihplay/product/:videoID/:productID**
+  **PATCH /api/gigihplay/product/id/:productID**
   ---
   * **URL Params**
-    * **Required:** `videoID=[string]`
     * **Required:** `productID=[string]`
   * **Data Params**
     ```
@@ -157,10 +156,9 @@
     * **Code:** 400
     * **Content:** `{ message: <error_message> }`
 
-  **DELETE /api/gigihplay/product/:videoID/:productID**
+  **DELETE /api/gigihplay/product/id/:productID**
   ---
   * **URL Params**
-    * **Required:** `videoID=[string]`
     * **Required:** `productID=[string]`
   * **Success Response:**
     * **Code:** 200
@@ -208,10 +206,9 @@
     * **Code:** 400
     * **Content:** `{ message: <error_message> }`
 
-  **PATCH /api/gigihplay/comment/:videoID/:commentID**
+  **PATCH /api/gigihplay/comment/id/:commentID**
   ---
   * **URL Params**
-    * **Required:** `videoID=[string]`
     * **Required:** `commentID=[string]`
   * **Data Params**
     ```
@@ -227,10 +224,9 @@
     * **Code:** 400
     * **Content:** `{ message: <error_message> }`
 
-  **DELETE /api/gigihplay/comment/:videoID/:commentID**
+  **DELETE /api/gigihplay/comment/id/:commentID**
   ---
   * **URL Params**
-    * **Required:** `videoID=[string]`
     * **Required:** `commentID=[string]`
   * **Success Response:**
     * **Code:** 200
