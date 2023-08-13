@@ -8,6 +8,9 @@ router.get('/:videoID', async (req, res) => {
    const idParams = req.params.videoID;
    try {
       const getProducts = await VideoProduct.findOne({ videoID: idParams }, { products: 1 });
+      if(getProducts?.products == null) {
+         return res.status(404).json({ message: 'Product not found' });
+      }
       res.status(200).json(getProducts.products);
    } catch (error) {
       res.status(500).json({ message: error.message });

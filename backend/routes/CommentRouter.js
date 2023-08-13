@@ -6,16 +6,11 @@ const router = express.Router();
 router.get('/:videoID', async (req, res) => {
    const idParams = req.params.videoID;
    try {
-      const getComments = await VideoProduct.find({ videoID: idParams }, 
-         { 
-            "comments.username": 1, 
-            "comments.comment": 1, 
-            "comments._id": 1,
-            "comments.created_at": 1,
-            "comments.updated_at": 1 
-         }
-      );
-      res.status(200).json(getComments[0].comments);
+      const getVideo = await VideoProduct.findOne({ videoID: idParams });
+      if(getVideo?.comments == null) {
+         return res.status(404).json({ message: 'Comment not found' });
+      }
+      res.status(200).json(getVideo.comments);
    } catch (error) {
       res.status(500).json({ message: error.message });
    }
