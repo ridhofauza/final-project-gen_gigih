@@ -1,3 +1,10 @@
+# How To Run Frontend
+
+- Rename file .env_example to .env
+- Fill "REACT_APP_API_BASE_URL" with url backend
+- Open terminal in project directory
+- Type "npm run start" in terminal
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
